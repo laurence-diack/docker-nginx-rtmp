@@ -149,7 +149,7 @@ COPY --from=build-ffmpeg /usr/lib/libfdk-aac.so.2 /usr/lib/libfdk-aac.so.2
 
 # Add NGINX config and static files.
 ADD nginx.conf /opt/nginx/nginx.conf
-ADD nginx.conf /opt/nginx/watermark.png
+ADD watermark.png /tmp/watermark.png
 RUN mkdir -p /opt/data && mkdir /www
 ADD static /www/static
 
